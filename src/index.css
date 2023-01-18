@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.bg-main img {
+  width: 100%;
+  height: 300px;
+}
+
+.back-card {
+  background: url("./images/bg-card-back.png") no-repeat center/cover;
+  height: 200px;
+  width: 320px;
+  border-radius: 10px;
+}
+
+.back-card h2 {
+  position: absolute;
+  right: 2rem;
+  top: 7.9rem;
+  color: #ffff;
+}
+
+.front-card {
+  background: url("./images/bg-card-front.png") no-repeat center/cover;
+  height: 200px;
+  width: 320px;
+  right: 1rem;
+  border-radius: 10px;
+  margin-top: -5.5rem;
+}
+
+.front-card h2 {
+  color: #ffff;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.front-card ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #ffff;
+}
+
+form {
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+
+form label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  color: hsl(278, 68%, 11%);
+}
+
+form input {
+  border-width: 1px;
+  border-radius: 0.25rem;
+  outline: none;
+  padding: 0.75rem 1rem;
+  width: 300px;
+  font-family: inherit;
+  @apply border-slate-400
+}
+
+form .btn {
+  display: block;
+  width: 300px;
+  background-color: hsl(278, 68%, 11%);
+  padding: 0.75rem 1rem;
+  color: #ffff;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.two-way {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.exp_date input {
+  width: 150px;
+}
+
+.cvc input {
+  width: 150px;
+}
+
+@media (min-width: 1024px) {
+  .bg-main img {
+    position: absolute;
+    height: 100vh;
+    width: 300px;
+    z-index: -10;
+  }
+
+  .card-section {
+    width: 600px;
+    height: 600px;
+  }
+
+  .card-section .front-card {
+    position: absolute;
+    top: 180px;
+    right: 200px;
+  }
+
+  .card-section .back-card {
+    position: absolute;
+    top: 340px;
+    right: -90pc;
+  }
+
+  .card-section {
+    position: absolute;
+    right: 900px;
+    height: 900px;
+  }
+
+  .form-section {
+    position: absolute;
+    right: 300px;
+    top: 100px;
+  }
+
+  form .btn {
+    margin-top: 2rem;
+  }
+
+  
+}
+
+@media (min-width: 768px) {
+  .bg-main img {
+      position: absolute;
+      height: 100vh;
+      width: 300px;
+      z-index: -10;
+    }
+
+  .card-section .front-card {
+    position: absolute;
+    top: 200px;
+  }
+
+  .card-section .back-card {
+    position: absolute;
+    top: 340px;
+    left: -280px;
+  }
+
+  .card-section {
+    position: absolute;
+    right: 400px;
+    height: 400px;
+  }
+
+  .form-section {
+    position: absolute;
+    right: 40px;
+    top: 100px;
+  }
+
+  form .btn {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1028px) {
+  .card-section .front-card {
+    position: absolute;
+    top: 200px;
+    left: -100px
+  }
+
+  .form-section {
+    position: absolute;
+    right: 200px;
+    top: 100px;
+  }
+
+  .card-section .back-card {
+    position: absolute;
+    top: 340px;
+    left: -70px;
+  }
+}
